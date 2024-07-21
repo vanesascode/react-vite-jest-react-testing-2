@@ -1,8 +1,10 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
+  // target is destructured from event (event.target)
   const onInputChange = ({ target }) => {
     setInputValue(target.value);
   };
@@ -16,7 +18,8 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    //In this case, the aria-label attribute is used to provide a label for the form, indicating that it is a form (useful for the JEST TEST)
+    <form onSubmit={onSubmit} aria-label="form">
       <input
         type="text"
         placeholder="Buscar gifs"
@@ -25,4 +28,8 @@ export const AddCategory = ({ onNewCategory }) => {
       />
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
 };
