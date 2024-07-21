@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifItem /> tests should render correctly 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="title"
+      src="https://one-punch.com/"
+    />
+    <p>
+      title
+    </p>
+  </div>
+</div>
+`;
